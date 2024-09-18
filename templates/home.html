@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Spam Checker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        .container {
+            background-color: aquamarine;
+            margin-top: 50px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center">Email Spam Checker</h1>
+                <p class="text-center">Enter an email to check if it is spam or not.</p>
+                <form action="{{  url_for('predict')  }}" method="post" id="spamCheckForm">
+                    <div class="form-group">
+                        <label for="email">Email:-</label>
+                        <input type="text" name="useremail" class="form-control" id="email" placeholder="Enter email"
+                            required>
+                    </div>
+                    <button type="submit">Check</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
